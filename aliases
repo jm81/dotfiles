@@ -20,7 +20,7 @@ alias gci="git pull --rebase && rake && git push"
 alias b="bundle"
 
 # Tests and Specs
-alias t="ruby -I test"
+alias t="bundle exec autotest"
 
 # Rails
 alias c="rails c"
