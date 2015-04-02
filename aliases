@@ -27,7 +27,7 @@ alias c="rails c"
 alias migrate="rake db:migrate db:rollback && rake db:migrate"
 alias m="migrate"
 alias rk="rake"
-alias s="rspec"
+alias s="bundle exec rake spec"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
