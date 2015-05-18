@@ -8,6 +8,15 @@ git_prompt_info() {
 setopt promptsubst
 export PS1='%* ${SSH_CONNECTION+"%{$fg[magenta]%}%n@%m:"}%{$fg[blue]%}%d%{$reset_color%}$(git_prompt_info) %# '
 
+function zle-line-init zle-keymap-select {
+  VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]% %{$reset_color%}"
+  RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+  zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
 
@@ -47,6 +56,7 @@ unsetopt nomatch
 bindkey -v
 bindkey "^F" vi-cmd-mode
 bindkey jj vi-cmd-mode
+export KEYTIMEOUT=1
 
 # handy keybindings
 bindkey "^A" beginning-of-line
