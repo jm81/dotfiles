@@ -1,0 +1,6 @@
+# git commit with a message, then commit --amend so I can edit message.
+#
+# There's probably a better way to do this, but I haven't found it.
+gc() {
+  git commit -m $@; git commit --amend
+}
