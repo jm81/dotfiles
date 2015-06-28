@@ -23,6 +23,7 @@ if filereadable(expand("~/.vimrc.bundles"))
 endif
 
 filetype plugin indent on
+runtime macros/matchit.vim
 
 augroup vimrcEx
   autocmd!
