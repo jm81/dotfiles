@@ -6,7 +6,7 @@ git_prompt_info() {
   fi
 }
 setopt promptsubst
-export PS1='%* ${SSH_CONNECTION+"%{$fg[magenta]%}%n@%m:"}%{$fg[blue]%}%d%{$reset_color%}$(git_prompt_info) %# '
+export PS1='%* %{$fg[magenta]%}%n@%m:%{$fg[blue]%}%d%{$reset_color%}$(git_prompt_info) %# '
 
 function zle-line-init zle-keymap-select {
   VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]% %{$reset_color%}"
