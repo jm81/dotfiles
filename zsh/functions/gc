@@ -2,5 +2,7 @@
 #
 # There's probably a better way to do this, but I haven't found it.
 gc() {
-  git commit -m $@; git commit --amend
+  if [[ $# > 0 ]]; then
+    git commit -m $@; git commit --amend
+  fi
 }
