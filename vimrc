@@ -142,6 +142,10 @@ nnoremap <C-l> <C-w>l
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
+" Ignore eruby warning
+let g:syntastic_eruby_ruby_quiet_messages =
+    \ {'regex': 'possibly useless use of a variable in void context'}
+
 " Powerline fonts
 let g:airline_powerline_fonts = 1
 
