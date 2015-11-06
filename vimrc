@@ -148,6 +148,7 @@ let g:syntastic_eruby_ruby_quiet_messages =
 
 " Powerline fonts
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'bubblegum'
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
