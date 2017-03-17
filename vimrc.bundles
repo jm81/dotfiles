@@ -34,6 +34,10 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'AndrewRadev/ember_tools.vim'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'godlygeek/tabular'
+Plugin 'rodjek/vim-puppet'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
