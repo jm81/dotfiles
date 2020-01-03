@@ -1,5 +1,5 @@
 # Change to working directory (assumed to be in /u/dev)
 
 function cdw() {
-  cd "/u/dev/$1";
+  cd "$HOME/u/dev/$1";
 }
