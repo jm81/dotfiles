@@ -34,5 +34,8 @@ alias s="bundle exec rake spec"
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
+# tmux
+alias tm="tmux new-session -A -s main"
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
