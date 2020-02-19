@@ -39,6 +39,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'godlygeek/tabular'
 Plugin 'rodjek/vim-puppet'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'preservim/nerdtree'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
