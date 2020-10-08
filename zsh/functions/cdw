@@ -3,3 +3,7 @@
 function cdw() {
   cd "$HOME/u/dev/$1";
 }
+
+function cdwc() {
+  cd "$HOME/u/dev/$1/packages/components";
+}
