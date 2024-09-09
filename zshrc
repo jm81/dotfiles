@@ -6,7 +6,7 @@ git_prompt_info() {
   fi
 }
 setopt promptsubst
-export PS1='%* %{$fg[magenta]%}%n@%m:%{$bg[blue]%}%{$fg[white]%}%d%{$reset_color%}$(git_prompt_info) %# '
+export PS1='%* %{$fg[yellow]%}%n@%m:%{$bg[red]%}%{$fg[white]%}%d%{$reset_color%}$(git_prompt_info) %# '
 
 function zle-line-init zle-keymap-select {
   VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]% %{$reset_color%}"
@@ -65,7 +65,7 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^P" history-search-backward
 bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
-bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
+bindkey -r "^L"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
@@ -108,3 +108,4 @@ _load_settings "$HOME/.zsh/configs"
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+export NODE_OPTIONS=--openssl-legacy-provider
